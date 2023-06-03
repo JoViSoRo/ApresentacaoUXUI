@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "Pixel-Art";
+  src: url("./fonte/fonte.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#gamefofinho {
+  position: fixed;
+  z-index: 99;
+  pointer-events: none;
+}
+#musica {
+  position: fixed;
+  z-index: -999;
+}
+
+* {
+  font-family: "Pixel-Art";
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./img/background.gif);
+  background-repeat: repeat-x;
+  background-color: #d1d2e6;
+  min-height: 100%;
+}
+
+.cima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteudo {
+  position: fixed;
+  z-index: 9999;
+}
+.perfil {
+  margin-top: 45px;
+  background-image: url(./img/borda-menu.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 18.75rem;
+  width: 30rem;
+  justify-content: center;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 200px;
+}
+
+.descricao p {
+  font-size: 0.9rem;
+  width: 20ch;
+}
+
+.descricao h1 {
+  font-size: 1.3rem;
+}
+
+figure {
+  padding-bottom: 90px;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}
+
+li {
+  color: rgb(0, 0, 0);
+}
+
+.caixinhas {
+  display: flex;
+  margin-top: 20px;
+  margin-left: -4px;
+}
+.caixinhas img {
+  max-width: 50px;
+}
+
+nav {
+  margin-right: 25px;
+}
+ul.links {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+li a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #3a181a;
+}
+
+.gitHub,
+.linkedin {
+  position: relative;
+}
+
+.gitHub::after,
+.linkedin::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0px;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  background-color: currentColor;
+  transition: 0.3s;
+}
+
+.gitHub:hover::after,
+.linkedin:hover::after {
+  width: 100%;
+}
+
+/* ----------------------------------- */
+
+.baixo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+.bau img {
+  min-width: 50%;
+}
+.hide {
+  display: none;
+}
+
+.qualquer {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto -5px auto ;
+  z-index: 999;
+}
+
+.baus {
+  display: flex;
+  gap: 100px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: flex-end;
+  padding-left: 120px;
+  /* overflow-x: auto; FICA COM UM SCROLL EM BAIXO DOS BAUS */
+}
+
+.chao {
+  content: " ";
+  width: 100vw;
+  height: 60px;
+  bottom: 0;
+  background-image: url(./img/blocos/blocomeiogrande.png);
+  background-size: 100px;
+  background-repeat: repeat-x;
+}
+
+@media (max-width: 700px) {
+  .baus {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 500px) {
+  #gamefofinho {
+    display: none;
+  }
+
+  body {
+    overflow-x: scroll;
+  }
+  .perfil {
+    margin-top: 20px;
+    height: 14.75rem;
+    width: 22rem;
+  }
+
+  figure img {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+
+  .descricao h1 {
+    font-size: 1.1rem;
+  }
+
+  .descricao {
+    width: 150px;
+    margin-top: 30px;
+  }
+  .descricao p {
+    font-size: 0.8rem;
+    width: 20ch;
+  }
+
+  .caixinhas {
+    padding-bottom: 24px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .caixinhas img {
+    max-width: 40px;
+  }
+
+  ul {
+    width: 100%;
+  }
+  ul.links {
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  .baus img {
+    width: 250px;
+  }
+
+  .baus {
+    gap: 60px;
+    overflow-x: scroll;
+    padding-left: 20px;
+  }
+
+  .chao {
+    height: 111px;
+  }
+}
+
+@media (max-height: 800px) {
+  .perfil {
+    margin-top: 20px;
+    height: 14.75rem;
+    width: 22rem;
+  }
+
+  figure img {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .descricao h1 {
+    font-size: 1.1rem;
+  }
+  .descricao {
+    width: 150px;
+    margin-top: 30px;
+  }
+  .descricao p {
+    font-size: 0.8rem;
+    width: 20ch;
+  }
+  .caixinhas {
+    padding-bottom: 24px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .caixinhas img {
+    max-width: 40px;
+  }
+  ul.links {
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  .baus img {
+    width: 250px;
+  }
+  .baus {
+    gap: 60px;
+    padding-left: 20px;
+  }
+}
