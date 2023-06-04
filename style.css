@@ -95,7 +95,8 @@ li {
   margin-left: -4px;
 }
 .caixinhas img {
-  max-width: 50px;
+  max-width: 40px;
+    max-height: 50px;
 }
 
 nav {
