@@ -247,6 +247,9 @@ li a {
     width: 250px;
   }
 
+  .bau5 img{
+    margin-right: 50px;
+  }
   .baus {
     gap: 60px;
     overflow-x: scroll;
