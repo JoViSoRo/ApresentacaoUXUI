@@ -291,6 +291,7 @@ li a {
   }
   .caixinhas img {
     max-width: 40px;
+  max-height: 50px;
   }
   ul.links {
     margin-left: 12px;
